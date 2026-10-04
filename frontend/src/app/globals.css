@@ -1,0 +1,27 @@
+/* @tailwind base; @tailwind components; @tailwind utilities; */
+/* :root{color-scheme:dark} html{scroll-behavior:smooth} body{margin:0;background:#09090b;color:#fafafa;font-family:Arial,Helvetica,sans-serif} .container{max-width:1100px;margin:auto;padding:0 24px} */
+
+
+@tailwind base; @tailwind components; @tailwind utilities;
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/download (3).jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}

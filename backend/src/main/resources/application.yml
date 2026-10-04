@@ -1,0 +1,37 @@
+spring:
+  config:
+    import: "optional:file:.env[.properties]"
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://127.0.0.1:5433/portfolio}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+  mvc:
+    static-path-pattern: /uploads/**
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  jwt-secret: ${JWT_SECRET:change-this-secret-in-production-change-this-secret}
+  jwt-expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  cors-origin: ${CORS_ORIGIN:http://localhost:3000}
+  upload-dir: ${UPLOAD_DIR:uploads}
+  admin:
+    username: ${ADMIN_USERNAME:admin}
+    password: ${ADMIN_PASSWORD:admin123}
+
+web:
+  resources:
+    static-locations: file:./uploads/

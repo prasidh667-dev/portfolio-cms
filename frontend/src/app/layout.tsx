@@ -1,0 +1,1 @@
+import './globals.css'; import type {Metadata} from 'next'; export const metadata:Metadata={title:'Developer Portfolio',description:'Portfolio powered by a custom Spring Boot CMS'}; export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
