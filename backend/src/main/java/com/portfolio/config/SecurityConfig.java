@@ -45,6 +45,7 @@ public class SecurityConfig {
                 .cors(c -> c.configurationSource(corsSource))
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(a -> a
+                        .requestMatchers("/").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/uploads/**", "/error", "/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/contact").permitAll()
