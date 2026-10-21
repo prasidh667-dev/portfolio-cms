@@ -2,9 +2,8 @@ package com.portfolio.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
-import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import io.swagger.v3.oas.annotations.security.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 
 @OpenAPIDefinition(
     security = @SecurityRequirement(name = "bearerAuth")
@@ -13,8 +12,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
     name = "bearerAuth",
     type = SecuritySchemeType.HTTP,
     scheme = "bearer",
-    bearerFormat = "JWT",
-    in = SecuritySchemeIn.HEADER
+    bearerFormat = "JWT"
 )
 public class OpenApiConfig {
 }
